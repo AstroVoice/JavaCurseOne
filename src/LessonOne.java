@@ -26,7 +26,7 @@ public class LessonOne {
         //Задание 7
         HelloName7("Себастьян Перейра");
         //Задание 8
-        checkVisokos8(1301);
+        checkVisokos8(400);
 
 
     }
@@ -90,8 +90,12 @@ public class LessonOne {
         }
 
          */
-        if (yearForCheck % 400 == 0 || yearForCheck % 4 == 0) {
+        //if (yearForCheck % 400 == 0  || yearForCheck % 4 == 0) {
+        //System.out.println("Високосный");
+        if (yearForCheck %4 == 0 && yearForCheck %100 !=0 || yearForCheck % 400 == 0) {
+
             System.out.println("Високосный");
+
         } else {
             System.out.println("Невисокосный");
 
