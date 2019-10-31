@@ -15,7 +15,7 @@ public class LessonOne {
         //Задание 2
         initVariable2();
         //Задание 3
-        System.out.println("Результат вычисления задания 3 - " + calculateNumber3(1, 2, 3.00001, 4));
+        System.out.println("Результат вычисления задания 3 - " + calculateNumber3(1, 2, 3, 4));
         //Задание 4
         System.out.println("Результат вычисления задания 4 - " + checkTrue4(3, 9));
         //Задание 5
@@ -26,7 +26,7 @@ public class LessonOne {
         //Задание 7
         HelloName7("Себастьян Перейра");
         //Задание 8
-        checkVisokos8(1304);
+        checkVisokos8(400);
 
 
     }
@@ -44,15 +44,18 @@ public class LessonOne {
 
     }
 
-    static double calculateNumber3(int a, int b, double c, int d) {
-        double result = a * (b + (c / d));
-        return result;
+    static double calculateNumber3(int a, int b, int c, int d) {
+
+        return (a * (b + (c / d)));
+        //double result = a * (b + (c / d));
+        //return result;
     }
 
     static boolean checkTrue4(int number1, int number2) {
 
-        if ((number1 + number2) >= 10 && (number1 + number2) <= 20) return true;
-        else return false;
+        //if ((number1 + number2) >= 10 && (number1 + number2) <= 20) return true;
+        //else return false;
+        return ((number1 + number2) >= 10 && (number1 + number2) <= 20);
     }
 
     static void checkNumberStatus5(int checkNumber) {
@@ -64,8 +67,9 @@ public class LessonOne {
     }
 
     static boolean checkNumberStatusbBool(int num1) {
-        if (num1 < 0) return true;
-        return false;
+        //if (num1 < 0) return true;
+        //return false;
+        return (num1 < 0);
     }
 
     static void HelloName7(String Name) {
@@ -73,7 +77,8 @@ public class LessonOne {
     }
 
     static void checkVisokos8(int yearForCheck) {
-        int YearCount;
+        //int YearCount;
+        /*
         if (yearForCheck % 400 == 0) {
             System.out.println("Високосный 400");
         } else if (yearForCheck % 100 == 0) {
@@ -83,9 +88,20 @@ public class LessonOne {
         } else {
             System.out.println("НеВисокосный");
         }
+
+         */
+        //if (yearForCheck % 400 == 0  || yearForCheck % 4 == 0) {
+        //System.out.println("Високосный");
+        if (yearForCheck %4 == 0 && yearForCheck %100 !=0 || yearForCheck % 400 == 0) {
+
+            System.out.println("Високосный");
+
+        } else {
+            System.out.println("Невисокосный");
+
+        }
+
     }
-
 }
-
 
 
